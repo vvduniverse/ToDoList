@@ -46,6 +46,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		84BB71AD27B2CD7F00106D6E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		84BF715227AFF45500A133F3 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +74,7 @@
 			children = (
 				84BF715E27AFF45500A133F3 /* ToDoListApp.swift */,
 				84818BE527B0086B00AB6CC3 /* Models */,
+				84BB71AD27B2CD7F00106D6E /* ViewModels */,
 				84BF716C27AFF6C300A133F3 /* Views */,
 				84BF716227AFF45700A133F3 /* Assets.xcassets */,
 				84BF716427AFF45700A133F3 /* Preview Content */,
