@@ -22,7 +22,7 @@ struct AddView: View {
                 TextField("Type somethinbg here...", text: $textFieldText )
                     .padding()
                     .frame(height: 55)
-                    .background(Color(white: 0.93))
+                    .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(10)
                 
                 Button {
@@ -40,7 +40,7 @@ struct AddView: View {
             .padding(14)
         }
         .navigationTitle("Add an Item 🖋")
-        .alert(isPresented: $showAlert, content: getAlert) 
+        .alert(isPresented: $showAlert, content: getAlert)
     }
     
     func saveButtonPressed() {
@@ -66,8 +66,17 @@ struct AddView: View {
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            AddView()
+        Group {
+            NavigationView {
+                AddView()
+            }
+            .preferredColorScheme(.light)
+            .environmentObject(ListViewModel())
+            NavigationView {
+                AddView()
+            }
+            .preferredColorScheme(.dark)
+            .environmentObject(ListViewModel())
         }
     }
 }
